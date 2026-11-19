@@ -10,21 +10,21 @@ public class Flower {
         String inputFName = "INPUT.txt";
         Scanner scan = new Scanner(new File(inputFName));
         int p = scan.nextInt();
-        String[] Flower = {"G", "C", "V"};
+        String[] flower = {"G", "C", "V"};
         for (int i = 1; i <= p; i++) {
             String empty;
             //Маша
-            empty = Flower[1];
-            Flower[1] = Flower[2];
-            Flower[2] = empty;
+            empty = flower[1];
+            flower[1] = flower[2];
+            flower[2] = empty;
             ///Таня
-            empty = Flower[0];
-            Flower[0] = Flower[1];
-            Flower[1] = empty;
-            System.out.println(Arrays.toString(Flower));
+            empty = flower[0];
+            flower[0] = flower[1];
+            flower[1] = empty;
+            System.out.println(Arrays.toString(flower));
         }
         String outputFName = "OUTPUT.TXT";
-        String s = Arrays.toString(Flower);
+        String s = Arrays.toString(flower);
 
         Files.writeString(Path.of(outputFName), s);
     }
